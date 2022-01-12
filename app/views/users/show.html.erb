@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="side">
+    <%= render "side_user" %>
+  </div>
+  <div class="main">
+ <div class="main-header">
+  <div class="mypage-title">
+  <%= @nickname %>さんの投稿一覧
+  </div>
+  
+</div>
+
+
+<div class="main-form">
+    <div class="sentence">
+      <% @texts.each do |text| %>
+        <div class="english">
+          <div class="english-text">
+          <%= link_to text.sentence, text_path(text.id) %>
+          </div>
+        </div>
+     <div class="japanese">
+        <div class="japanese-text">
+        <%= text.translate %>
+        <div class="text-type">
+        ＜<%= text.type.name%>＞
+        </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>
+
+<div class="footer">
+</div>
+</div>
+</div>
