@@ -63,7 +63,7 @@ li {
 .text-registration__field {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 .text-registration__field:after {
